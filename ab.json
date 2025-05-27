@@ -16,14 +16,14 @@
           ]
         },
         "fixDsCacheBug": true,
-        "ProtoTest":2,
+        "ProtoTest": 2,
         "replaceJp2Format": true,
-        "DsCacheUseCacheUserLevelData":false,
+        "DsCacheUseCacheUserLevelData": false,
         "suppressionUsingUGJ": true,
         "dsCacheSkipIoLimitations": false,
         "userGraphJrCountersReadRate": 100,
-        "allowPromoteToIncreaseErInBidding" : true,
-        "limitPromoteAbilityToIncreaseErInNonBidding" : true,
+        "allowPromoteToIncreaseErInBidding": true,
+        "limitPromoteAbilityToIncreaseErInNonBidding": true,
         "userGraphJrMonitorLogRate": 111,
         "blockAnonymous": true,
         "dsCacheBisMonitorLogRate": 2,
@@ -134,8 +134,11 @@
         "applyBiddingTrafficManagement": true
       },
       "android": {
-         "applySuppressionExpiration": true,
-        "suppressionStrategy": {"segment": "both", "mode": "lastSeen"},
+        "applySuppressionExpiration": true,
+        "suppressionStrategy": {
+          "segment": "both",
+          "mode": "lastSeen"
+        },
         "freeDiskSpaceLimitation": true,
         "applyBiddingTrafficManagement": true
       }
@@ -175,12 +178,14 @@
       }
     }
   },
-  "experiments": [{
+  "experiments": [
+    {
       "landingID": 13190,
       "landingName": "Control-Disable auto-skovelray & no timers",
       "enabled": true,
       "userClusters": [
-        1,2
+        1,
+        2
       ],
       "toggles": {},
       "sdkToggles": {}
@@ -190,31 +195,38 @@
       "landingName": "Test-Disable auto-skovelray",
       "enabled": true,
       "userClusters": [
-        3,4
+        3,
+        4
       ],
       "toggles": {},
-      "sdkToggles": {"skoverlay": {
-  "enable": false
-}}
+      "sdkToggles": {
+        "skoverlay": {
+          "enable": false
+        }
+      }
     },
     {
       "landingID": 13192,
       "landingName": "Test-No timers",
       "enabled": true,
       "userClusters": [
-        7,8
+        7,
+        8
       ],
       "toggles": {},
-      "sdkToggles": {"barSettings": {
-    "enable": false
-} }
+      "sdkToggles": {
+        "barSettings": {
+          "enable": false
+        }
+      }
     },
-       {
+    {
       "landingID": 13185,
       "landingName": "control - ignore supply extended",
       "enabled": true,
       "userClusters": [
-        11,12
+        11,
+        12
       ],
       "toggles": {},
       "sdkToggles": {}
@@ -224,7 +236,8 @@
       "landingName": "test - ignore supply extended",
       "enabled": true,
       "userClusters": [
-        13,20
+        13,
+        20
       ],
       "toggles": {
         "ignoreSupplyWLBL": true
@@ -236,7 +249,8 @@
       "landingName": "Control -Mainstream GC",
       "enabled": true,
       "userClusters": [
-        14,15
+        14,
+        15
       ],
       "toggles": {},
       "sdkToggles": {}
@@ -246,10 +260,11 @@
       "landingName": "Test-GC 0.95",
       "enabled": true,
       "userClusters": [
-        16,17
+        16,
+        17
       ],
       "toggles": {
-        "profitRatio":0.95
+        "profitRatio": 0.95
       },
       "sdkToggles": {}
     },
@@ -258,14 +273,15 @@
       "landingName": "Test-GC 1.05",
       "enabled": true,
       "userClusters": [
-        18,19
+        18,
+        19
       ],
       "toggles": {
-        "profitRatio":1.05
+        "profitRatio": 1.05
       },
       "sdkToggles": {}
     },
-     {
+    {
       "landingID": 13143,
       "landingName": "Control - B - BBAA - Suppressions Test",
       "enabled": true,
@@ -287,11 +303,21 @@
           "internalRuleID": 17
         },
         "applySuppressionExpiration": true,
-        "suppressionStrategy": {"segment": "both", "mode": "legacy"}
+        "suppressionStrategy": {
+          "segment": "both",
+          "mode": "legacy"
+        }
       },
       "sdkToggles": {}
+    },
+    {
+      "landingName": "dfsdfdsf",
+      "enabled": true,
+      "userClusters": [],
+      "toggles": {},
+      "sdkToggles": {},
+      "landingID": 13193
     }
-
   ],
   "filters": [
     {
@@ -315,49 +341,49 @@
       ]
     },
     {
-  "applicationIDs": [
-    1089469
-  ],
-  "landings": [
-    {
-      "landingID": 13171,
-      "enabled": true,
-      "landingName": "control",
-      "toggles": {},
-      "sdkToggles": {}
-    },
-    {
-      "landingID": 13172,
-      "enabled": true,
-      "landingName": "test",
-      "toggles": {},
-      "sdkToggles": {
-        "xButtonData": {
-          "skipInText": "Skip In"
+      "applicationIDs": [
+        1089469
+      ],
+      "landings": [
+        {
+          "landingID": 13171,
+          "enabled": true,
+          "landingName": "control",
+          "toggles": {},
+          "sdkToggles": {}
         },
-        "skoverlay": {
-          "0": {
-            "onDisplay": {
-              "delay": 3000
+        {
+          "landingID": 13172,
+          "enabled": true,
+          "landingName": "test",
+          "toggles": {},
+          "sdkToggles": {
+            "xButtonData": {
+              "skipInText": "Skip In"
+            },
+            "skoverlay": {
+              "0": {
+                "onDisplay": {
+                  "delay": 3000
+                }
+              },
+              "enable": true
             }
-          },
-          "enable": true
+          }
         }
-      }
-    }
-  ]
-},
+      ]
+    },
     {
       "applicationIDs": [
         50442,
         221417,
-746903,
-707647,
-1048237,
-728887,
-627260,
-227995,
-238705
+        746903,
+        707647,
+        1048237,
+        728887,
+        627260,
+        227995,
+        238705
       ],
       "landings": [
         {
@@ -386,64 +412,64 @@
         266715,
         266717,
         155583,
-146005,
-225559,
-394249,
-223777,
-151369,
-294243,
-232453,
-159633,
-161333,
-251567,
-444980,
-452828,
-346217,
-219289,
-428540,
-913677,
-379793,
-656038,
-808515,
-155581,
-416178,
-516037,
-417214,
-514355,
-540903,
-827083,
-325427,
-257121,
-777249,
-308463,
-174371,
-255013,
-303005,
-174369,
-232363,
-931423,
-213137,
-209537,
-1014591,
-698389,
-1014587,
-464104,
-859675,
-526053,
-839533,
-899047,
-567033,
-575063,
-898569,
-836161,
-856065,
-549405,
-708417,
-156063,
-678424,
-        1048741, 
-        1048647, 
-        1052913, 
+        146005,
+        225559,
+        394249,
+        223777,
+        151369,
+        294243,
+        232453,
+        159633,
+        161333,
+        251567,
+        444980,
+        452828,
+        346217,
+        219289,
+        428540,
+        913677,
+        379793,
+        656038,
+        808515,
+        155581,
+        416178,
+        516037,
+        417214,
+        514355,
+        540903,
+        827083,
+        325427,
+        257121,
+        777249,
+        308463,
+        174371,
+        255013,
+        303005,
+        174369,
+        232363,
+        931423,
+        213137,
+        209537,
+        1014591,
+        698389,
+        1014587,
+        464104,
+        859675,
+        526053,
+        839533,
+        899047,
+        567033,
+        575063,
+        898569,
+        836161,
+        856065,
+        549405,
+        708417,
+        156063,
+        678424,
+        1048741,
+        1048647,
+        1052913,
         1052915
       ],
       "landings": [
@@ -515,13 +541,12 @@
         852483,
         849985,
         195813,
-				195815,
-				195817,
+        195815,
+        195817,
         195821,
         1027327,
         1027615,
         1030773
-        
       ],
       "landings": [
         {
@@ -561,7 +586,6 @@
         1030769,
         253673,
         319393
-        
       ],
       "landings": [
         {
@@ -621,7 +645,6 @@
         621160,
         621162,
         785685
-     
       ],
       "landings": [
         {
@@ -653,10 +676,6 @@
         1028839,
         678826,
         1005071
-        
-        
-        
-        
       ],
       "landings": [
         {
@@ -974,8 +993,7 @@
           "landingID": 10748,
           "enabled": true,
           "landingName": "Users QA Mainstream Copy",
-          "toggles": {
-          },
+          "toggles": {},
           "sdkToggles": {}
         }
       ]
@@ -1432,8 +1450,8 @@
         831661,
         831671,
         831663,
-		253675,
-		831673,
+        253675,
+        831673,
         827031,
         827029,
         1030771,
@@ -1445,7 +1463,7 @@
           "enabled": true,
           "landingName": "Sybo and CrazyMaple- progress bar as counter",
           "toggles": {
-          	"SkipOnRv": false
+            "SkipOnRv": false
           },
           "sdkToggles": {
             "both": {
@@ -1458,13 +1476,13 @@
         }
       ]
     },
-       {
+    {
       "applicationIDs": [
-		1030767,
-		539283,
-		258379,
-		601849,
-		318639
+        1030767,
+        539283,
+        258379,
+        601849,
+        318639
       ],
       "landings": [
         {
@@ -1472,22 +1490,22 @@
           "enabled": true,
           "landingName": "Sybo and CrazyMaple- progress bar as counter and disable auto storekit",
           "toggles": {
-          	"SkipOnRv": false
+            "SkipOnRv": false
           },
           "sdkToggles": {
             "both": {
               "barSettings": {
                 "templateId": 0
               },
-			  "aecsk": {
-              "enable": false
-            }
+              "aecsk": {
+                "enable": false
+              }
             },
             "android": {}
           }
         }
       ]
-    },   
+    },
     {
       "applicationIDs": [
         98797,
