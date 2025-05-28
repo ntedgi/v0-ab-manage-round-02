@@ -8,16 +8,5 @@
     "deploymentEnabled": {
       "main": true
     }
-  },
-  "env": {
-    "GITHUB_TOKEN": {
-      "type": "secret"
-    },
-    "GITHUB_REPO_OWNER": {
-      "type": "string"
-    },
-    "GITHUB_REPO_NAME": {
-      "type": "string"
-    }
   }
 }
